@@ -1,8 +1,16 @@
 package com.rvillarroel.jogobonito;
 
 import java.time.LocalDate; 
+import java.util.UUID;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Player {
+ 
+    @Id
+    private final String id;
     String name;
     String lastName;
     LocalDate birthDay;
@@ -11,20 +19,18 @@ public class Player {
     Goals goals;
 
 
-
-    public Player(String name, String lastName, LocalDate birthDay) {
-        this.name = name;
-        this.lastName = lastName;
-        this.birthDay = birthDay;
-    }  
+    public Player(String id) {
+        this.id = id;
+      
+    }      
 
     public Player(String name, String lastName, LocalDate birthDay, Team team) {
+        this(UUID.randomUUID().toString());
         this.name = name;
         this.lastName = lastName;
         this.birthDay = birthDay;
         this.team = team;
-    }
-
+    }     
 
 
     public Team getTeam() {
@@ -93,6 +99,10 @@ public class Player {
     @Override
     public String toString() {
         return "Player [birthDay=" + birthDay + ", lastName=" + lastName + ", name=" + name + "]";
+    }
+
+    public String getId() {
+        return id;
     }
 
 }
