@@ -31,12 +31,12 @@ public class PlayerController {
 
         oscarBenavidez = new Team("Oscar Benavidez", LocalDateTime.now());
 
-        playerRepository.saveAll(List.of(new Player("Ronny", "Villarroel", LocalDate.of(1984, Month.JULY, 31),oscarBenavidez),
-                new Player("Oliver", "Villarroel", LocalDate.of(1986, Month.FEBRUARY, 2),oscarBenavidez),
-                new Player("Pablo Alfredo", "Arce Diaz", LocalDate.of(1984, Month.FEBRUARY, 2),oscarBenavidez),
-                new Player("Miguel", "Mendoza", LocalDate.of(1971, Month.JANUARY, 1),oscarBenavidez),
-                new Player("Mauricio", "Bravo", LocalDate.of(1981, Month.JANUARY, 1),oscarBenavidez),
-                new Player("Sossa Padilla", "Danny Omar", LocalDate.of(1982, Month.JANUARY, 1),oscarBenavidez)
+        playerRepository.saveAll(List.of(new Player("Ronny", "Villarroel", LocalDate.of(1984, Month.JULY, 31) ),
+                new Player("Oliver", "Villarroel", LocalDate.of(1986, Month.FEBRUARY, 2) ),
+                new Player("Pablo Alfredo", "Arce Diaz", LocalDate.of(1984, Month.FEBRUARY, 2) ),
+                new Player("Miguel", "Mendoza", LocalDate.of(1971, Month.JANUARY, 1) ),
+                new Player("Mauricio", "Bravo", LocalDate.of(1981, Month.JANUARY, 1) ),
+                new Player("Sossa Padilla", "Danny Omar", LocalDate.of(1982, Month.JANUARY, 1) )
         ));
 
         /*playersBenavidez.addAll(List.of(new Player("Ronny", "Villarroel", LocalDate.of(1984, Month.JULY, 31),oscarBenavidez),

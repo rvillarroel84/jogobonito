@@ -1,13 +1,20 @@
 package com.rvillarroel.jogobonito;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import java.util.UUID;
+
 
 public class Goals {
+
+    private final String id;
     Player player;
     Game match;
 
     public Goals(Player player, Game match) {
         this.player = player;
         this.match = match;
+        id = UUID.randomUUID().toString();
     }
 
 

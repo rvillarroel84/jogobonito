@@ -10,13 +10,16 @@ import javax.persistence.Id;
 public class Player {
  
     @Id
-    private final String id;
+    String id;
     String name;
     String lastName;
     LocalDate birthDay;
-    Team team;
-    Cards cards;
-    Goals goals;
+    //Team team;
+    //Cards cards;
+    //Goals goals;
+
+    public Player() {
+    }
 
 
     public Player(String id) {
@@ -24,22 +27,16 @@ public class Player {
       
     }      
 
-    public Player(String name, String lastName, LocalDate birthDay, Team team) {
+    public Player(String name, String lastName, LocalDate birthDay ) {
         this(UUID.randomUUID().toString());
         this.name = name;
         this.lastName = lastName;
         this.birthDay = birthDay;
-        this.team = team;
+
     }     
 
 
-    public Team getTeam() {
-        return team;
-    }
 
-    public void setTeam(Team team) {
-        this.team = team;
-    }
 
     public String getName() {
         return name;
@@ -80,21 +77,21 @@ public class Player {
         return realAge;
     }  
 
-    public Cards getCards() {
-        return cards;
-    }
-
-    public void setCards(Cards cards) {
-        this.cards = cards;
-    }
-
-    public Goals getGoals() {
-        return goals;
-    }
-
-    public void setGoals(Goals goals) {
-        this.goals = goals;
-    }
+//    public Cards getCards() {
+//        return cards;
+//    }
+//
+//    public void setCards(Cards cards) {
+//        this.cards = cards;
+//    }
+//
+//    public Goals getGoals() {
+//        return goals;
+//    }
+//
+//    public void setGoals(Goals goals) {
+//        this.goals = goals;
+//    }
 
     @Override
     public String toString() {
@@ -105,4 +102,7 @@ public class Player {
         return id;
     }
 
+    public void setId(String id) {
+        this.id = id;
+    }
 }
